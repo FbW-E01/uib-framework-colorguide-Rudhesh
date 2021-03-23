@@ -1,3 +1,161 @@
 // This is where you can import other stylesheets or write your scss code
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+$yellow: #ffc83f;
+
+$red: #fa5e5b;
+
+$blue: #1d508d;
+
+$purple: #684e79;
+
+$gray:rgb(122, 122, 122);
+
+@mixin box-size {
+
+    width: 400px;
+    height: 500px;
+    border: 1px $gray solid;
+}
+
+@mixin container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1 {
+
+    text-align: center;
+    color: $gray;
+    
+    
+}
+
+.content {
+
+margin: 15px;
+color: $gray;
+ 
+}
+
+
+
+
+.container-1 {
+    @include container;
+
+}
+.box {
+    @include box-size;
+    margin: 20px;
+
+    .item {
+        width: 400px;
+        height: 400px;
+        
+    }
+
+    .color-box1 {
+    
+        background-color: $yellow;
+    }
+
+    .color-box2 {
+    
+        background-color: $red;
+    }
+
+    .color-box3 {
+    
+        background-color: $blue;
+    }
+
+    .color-box4 {
+    
+        background-color: $purple;
+    }
+   
+}
+
+.container-2 {
+    margin-top: 100px;
+    @include container;
+
+    .color-box1 {
+        display: flex;
+
+    
+        .shade1 {
+            flex: 1;
+            background-color: lighten(#ffc83f, 5%);
+        }
+        .shade2 {
+            flex: 1;
+            background-color: lighten(#ffc83f, 0%);
+        }
+        .shade3 {
+            flex: 1;
+            background-color: lighten(#ffc83f, 20%);
+        }
+    }
+
+    .color-box2 {
+        display: flex;
+
+    
+        .shade1 {
+            flex: 1;
+            background-color: lighten(#fa5e5b, 5%);
+        }
+        .shade2 {
+            flex: 1;
+            background-color: lighten(#fa5e5b, 0%);
+        }
+        .shade3 {
+            flex: 1;
+            background-color: lighten(#fa5e5b, 20%);
+        }
+    }
+
+    .color-box3 {
+        display: flex;
+
+    
+        .shade1 {
+            flex: 1;
+            background-color: lighten(#1d508d, 5%);
+        }
+        .shade2 {
+            flex: 1;
+            background-color: lighten(#1d508d, 0%);
+        }
+        .shade3 {
+            flex: 1;
+            background-color: lighten(#1d508d, 20%);
+        }
+    }
+
+    .color-box4 {
+        display: flex;
+
+    
+        .shade1 {
+            flex: 1;
+            background-color: lighten(#684e79, 5%);
+        }
+        .shade2 {
+            flex: 1;
+            background-color: lighten(#684e79, 0%);
+        }
+        .shade3 {
+            flex: 1;
+            background-color: lighten(#684e79, 20%);
+        }
+    }
+
+
+
+
+
+}
